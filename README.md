@@ -20,10 +20,10 @@ Refer readme.txt file in the data folder for specific file names and raw data st
 
 ##### Getting raw data and setting up R
 
-1. Download the data from [UCI Machine Learning Data Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
-2. Create a folder in your computer called "project". Unzip the contents of the zip file into "project" folder.
-3. Set "project" folder as your R working directory.
-4. Install libraries (dplyr and reshape2) 
++ Download the data from [UCI Machine Learning Data Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
++ Create a folder in your computer called "project". Unzip the contents of the zip file into "project" folder.
++ Set "project" folder as your R working directory.
++ Install libraries (dplyr and reshape2) 
 
 ##### Structure of run_analysis.R script
 
