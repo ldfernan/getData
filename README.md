@@ -45,7 +45,7 @@ The project_submit.txt file contains four columns
 
 1. activityName: 
 Possible vaues include
-+ WALKING
+* WALKING
 + WALKING_UPSTAIRS
 + WALKING_DOWNSTAIRS
 + SITTING
