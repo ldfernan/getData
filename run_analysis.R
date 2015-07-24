@@ -102,7 +102,7 @@ motion_Data_Long<-melt(subset_motion_data,id.vars=c("activityName","subjectNum")
            value.name = "featureValue")
 print("Long form of the motion data created!")
 
-## Output to a CSV file backup
+## Output to a CSV file backup for troubleshooting. 
 write.csv(motion_Data_Long,file="output_long_data.csv",append=FALSE)
 print("CSV file backup created in the R project working director. Use this for verification or  troubleshooting")
 
