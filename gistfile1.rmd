@@ -2,15 +2,19 @@
 title: "Codebook template"
 author: "LDFERNAN"
 date: "July, 23, 2015"
-output:
-  html_document:
-    keep_md: yes
 ---
 
 ## Project Description
-This script read, cleans and consolidates motion data( training and test) collected using a samsung phone for 30 subjects for a variety of activities.
+This script reads, cleans and consolidates motion data(training and test) collected using a samsung phone for 30 subjects for a variety of activities.
 
-##Study design and data processing
+##Script Structure
+ - Reads data from traning and test folders of the motion data
+ - Consolidates data files within traning and test data folders (to merge activity, subject and feature data)
+ - Combines training and test data
+ - Select only necessary columns (mean and standard deviations)
+ - Rename the columns to give them meaningful names
+ - Convert to a long form data
+ - Summarize (take mean) of the data values for each subject-activity-measure
 
 ###Collection of the raw data
 Description of how the data was collected.
