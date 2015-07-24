@@ -43,28 +43,28 @@ The R script should be places in the R working directory ("project"). Use either
 
 The project_submit.txt file contains four columns
 
-1. activityName: 
++ activityName: 
 Possible vaues include
-* WALKING
-+ WALKING_UPSTAIRS
-+ WALKING_DOWNSTAIRS
-+ SITTING
-+ STANDING
-+ LAYING
+    + WALKING
+    + WALKING_UPSTAIRS  
+    + WALKING_DOWNSTAIRS
+    + SITTING
+    + STANDING
+    + LAYING
 
-2. subjectName
-+ This row contains the subject numbers for each of the 30 participants. The range of data is 1-30
-+ This is a numeric column
++ subjectName
+    + This row contains the subject numbers for each of the 30 participants. The range of data is 1-30
+    + This is a numeric column
 
-3. featureName
-+ This column contains the feature names.
-+ Values either start with 'time' or 'freq'
-+ MeanX and StdDevX are means and standard deviations of the respective measurements for X. The data includes data for Y and Z as well.
++ featureName
+    + This column contains the feature names.
+    + Values either start with 'time' or 'freq'
+    + MeanX and StdDevX are means and standard deviations of the respective measurements for X. The data includes data for Y and Z as well.
 
-4. featureMean
-+ This column contains the mean of the standardized values of feature measurements.
-+ The data is in range -1 to 1
-+ This data is unit-less due to standardization.
++ featureMean
+    + This column contains the mean of the standardized values of feature measurements.
+    + The data is in range -1 to 1
+    + This data is unit-less due to standardization.
 
 ##### Bibliography
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
