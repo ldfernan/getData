@@ -10,8 +10,8 @@ This script reads, cleans and consolidates human motion data (training and test)
 ##### Notes on the original (raw) data 
 The data should be downloaded from [UCI Machine Learning Data Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). The data folder contains two folders called "test" and "train".
 
-###### Data Components
-Refer readme file in the data folder for specific file names.
+##### Data Components
+Refer readme.txt file in the data folder for specific file names and raw data structure.
 - Activity - Walking, Sitting, etc. Data in long form (one long column)
 - Subject - The number indicating the participants/subjects. Data is in long form.
 - Features - Several measurements are captured using the phone hardware. Some preliminary cleanup is performed on the data. The measurements are also standardized to make it fall in the range -1 to +1 (without losing actual information). Features data is in wide form (one long row)
@@ -25,7 +25,7 @@ Refer readme file in the data folder for specific file names.
 3. Set "project" folder as your R working directory.
 4. Install libraries (dplyr and reshape2) 
 
-##### run_analysis.R script
+##### Structure of run_analysis.R script
 
 The R script should be places in the R working directory ("project"). Use either R prompt or RStudio to run the script. 
  - Import necessary libraries (dplyr and reshape2)
@@ -37,27 +37,33 @@ The R script should be places in the R working directory ("project"). Use either
  - Convert to a long form data
  - Summarize (take means) of the data values for each subject-activity-measure
 
-##Description of the variables in the project_submit.txt file
-General description of the file including:
- - Dimensions of the dataset
- - Summary of the data
- - Variables present in the dataset
+#####Code Book
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+######Description of the variables in the project_submit.txt file
 
-###Variable 1 (repeat this section for all variables in the dataset)
-Short description of what the variable describes.
+The project_submit.txt file contains four columns
+*activityName: 
+Possible vaues include
++ WALKING
++ WALKING_UPSTAIRS
++ WALKING_DOWNSTAIRS
++ SITTING
++ STANDING
++ LAYING
 
-Some information on the variable including:
- - Class of the variable
- - Unique values/levels of the variable
- - Unit of measurement (if no unit of measurement list this as well)
- - In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels). 
+*subjectName
++ This row contains the subject numbers for each of the 30 participants. The range of data is 1-30
++ This is a numeric column
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+*featureName
++ This column contains the feature names.
++ Values either start with 'time' or 'freq'
++ MeanX and StdDevX are means and standard deviations of the respective measurements for X. The data includes data for Y and Z as well.
 
-####Notes on variable 1:
-If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
+*featureMean
++ This column contains the mean of the standardized values of feature measurements.
++ The data is in range -1 to 1
++ This data is unit-less due to standardization.
 
 ##### Bibliography
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
