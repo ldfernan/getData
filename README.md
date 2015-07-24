@@ -33,7 +33,7 @@ The R script should be places in the R working directory ("project"). Use either
  - Consolidates data files within training and test data folders (to merge activity, subject and features data using cbind)
  - Combine training and test data (rbind)
  - Select only necessary columns (mean and standard deviations using filters on column names that contain mean() and std())
- - Rename the columns to give them meaningful names
+ - Rename the feature names to give them meaningful names
  - Convert to a long form data
  - Summarize (take means) of the data values for each subject-activity-measure
 
@@ -42,7 +42,8 @@ The R script should be places in the R working directory ("project"). Use either
 ######Description of the variables in the project_submit.txt file
 
 The project_submit.txt file contains four columns
-*activityName: 
+
+1. activityName: 
 Possible vaues include
 + WALKING
 + WALKING_UPSTAIRS
@@ -51,16 +52,16 @@ Possible vaues include
 + STANDING
 + LAYING
 
-*subjectName
+2. subjectName
 + This row contains the subject numbers for each of the 30 participants. The range of data is 1-30
 + This is a numeric column
 
-*featureName
+3. featureName
 + This column contains the feature names.
 + Values either start with 'time' or 'freq'
 + MeanX and StdDevX are means and standard deviations of the respective measurements for X. The data includes data for Y and Z as well.
 
-*featureMean
+4. featureMean
 + This column contains the mean of the standardized values of feature measurements.
 + The data is in range -1 to 1
 + This data is unit-less due to standardization.
