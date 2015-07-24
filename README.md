@@ -1,36 +1,43 @@
 ---
-title: "Codebook template"
-author: "LDFERNAN"
+title: "Tidy Data: Human Activity Recognition Using Smartphones Data Set"
+author: "ldfernan"
 date: "July, 23, 2015"
 ---
 
-## Project Description
-This script reads, cleans and consolidates motion data(training and test) collected using a samsung phone for 30 subjects for a variety of activities.
+### Project Description
+This script reads, cleans and consolidates human motion data (training and test) collected by 30 subjects for a variety of activities using a samsung phones hardware.
 
-##Script Structure
+##### Notes on the original (raw) data 
+The data should be downloaded from [UCI Machine Learning Data Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). The data folder contains two folders called "test" and "train".
+
+###### Data Components
+Refer readme file in the data folder for specific file names.
+- Activity - Walking, Sitting, etc. Data in long form (one long column)
+- Subject - The number indicating the participants/subjects. Data is in long form.
+- Features - Several measurements are captured using the phone hardware. Some preliminary cleanup is performed on the data. The measurements are also standardized to make it fall in the range -1 to +1 (without losing actual information). Features data is in wide form (one long row)
+
+#### Creating the tidy datafile
+
+##### Getting raw data and setting up R
+
+1. Download the data from [UCI Machine Learning Data Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+2. Create a folder in your computer called "project". Unzip the contents of the zip file into "project" folder.
+3. Set "project" folder as your R working directory.
+4. Install libraries (dplyr and reshape2) 
+
+##### run_analysis.R script
+
+The R script should be places in the R working directory ("project"). Use either R prompt or RStudio to run the script. 
+ - Import necessary libraries (dplyr and reshape2)
  - Reads data from traning and test folders of the motion data
- - Consolidates data files within traning and test data folders (to merge activity, subject and feature data)
- - Combines training and test data
- - Select only necessary columns (mean and standard deviations)
+ - Consolidates data files within training and test data folders (to merge activity, subject and features data using cbind)
+ - Combine training and test data (rbind)
+ - Select only necessary columns (mean and standard deviations using filters on column names that contain mean() and std())
  - Rename the columns to give them meaningful names
  - Convert to a long form data
- - Summarize (take mean) of the data values for each subject-activity-measure
+ - Summarize (take means) of the data values for each subject-activity-measure
 
-###Collection of the raw data
-Description of how the data was collected.
-
-###Notes on the original (raw) data 
-Some additional notes (if avaialble, otherwise you can leave this section out).
-
-##Creating the tidy datafile
-
-###Guide to create the tidy data file
-Description on how to create the tidy data file (1. download the data, ...)/
-
-###Cleaning of the data
-Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()
-
-##Description of the variables in the tiny_data.txt file
+##Description of the variables in the project_submit.txt file
 General description of the file including:
  - Dimensions of the dataset
  - Summary of the data
@@ -51,4 +58,7 @@ Some information on the variable including:
 
 ####Notes on variable 1:
 If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
+
+##### Bibliography
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
